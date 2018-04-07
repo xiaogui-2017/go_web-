@@ -1,3 +1,4 @@
+// 结构体使用
 package main
 
 import "fmt"
