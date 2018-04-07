@@ -1,3 +1,4 @@
+// 指针
 package main
 
 import "fmt"
