@@ -8,6 +8,7 @@ type Human struct {
 	phone string
 }
 
+// navigate to dumplicate  导航到重复
 type Student struct {
 	Human // 匿名函数
 	school string
