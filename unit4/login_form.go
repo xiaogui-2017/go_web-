@@ -20,12 +20,16 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "hello astaxie!")
 }
 func login(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("method:", r.Method)
+	//fmt.Println("method:", r.Method)
 	if r.Method == "GET" {
+		// 路径放在项目的根目录下
 		t, _ := template.ParseFiles("login.gtpl")
 		t.Execute(w, nil)
 	} else {
 		//请求的是登陆数据， 那么执行的登陆的逻辑判断
+		fmt.Println("post逻辑")
+		r.ParseForm()
+		fmt.Println(r.Form)
 		fmt.Println("username: ", r.Form["username"])
 		fmt.Println("password: ", r.Form["password"])
 	}
