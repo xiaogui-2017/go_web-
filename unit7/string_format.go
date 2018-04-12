@@ -8,6 +8,7 @@ import (
 	"fmt"
 )
 
+
 func main() {
 	a := strconv.FormatBool(false)
 	b := strconv.FormatFloat(123.23, 'g', 12, 64)
