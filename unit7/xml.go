@@ -20,6 +20,7 @@ type server struct {
 	ServerIP   string   `xml:"serverIP"`
 }
 
+
 func main() {
 	file, err := os.Open("servers.xml") // For read access.
 	if err != nil {
